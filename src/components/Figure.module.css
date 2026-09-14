@@ -1,0 +1,162 @@
+.figure {
+  margin: 0;
+  width: 100%;
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--n-50);
+}
+
+/* ---- Presentation: plain (framed) ---- */
+.plain .frame {
+  border: 1px solid var(--hairline);
+  background: var(--white);
+}
+
+/* ---- Presentation: browser ---- */
+.browser .frame {
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.28);
+}
+.chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 38px;
+  padding-inline: 14px;
+  border-bottom: 1px solid var(--hairline);
+  background: var(--n-50);
+}
+.dots {
+  display: flex;
+  gap: 6px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--hairline-strong);
+}
+.omni {
+  flex: 1;
+  height: 18px;
+  margin-left: 8px;
+  border-radius: 9px;
+  background: var(--white);
+  border: 1px solid var(--hairline);
+}
+
+/* ---- Presentation: device — flat iPhone 17 Pro ---- */
+.device .frame {
+  max-width: 300px;
+  margin-inline: auto;
+  background: #0a0a0a;
+  border-radius: 46px;
+  padding: 10px; /* uniform bezel */
+  overflow: visible;
+  box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.device .media {
+  border-radius: 37px; /* frame radius − bezel */
+  overflow: hidden;
+}
+/* Dynamic Island */
+.island {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 86px;
+  height: 26px;
+  background: #0a0a0a;
+  border-radius: 999px;
+  z-index: 3;
+}
+
+/* ---- Presentation: bleed ---- */
+.bleed .frame {
+  border-radius: 0;
+}
+
+/* ---- Media area ---- */
+.media {
+  position: relative;
+  width: 100%;
+}
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background: var(--n-50);
+}
+
+/* ---- Placeholder ---- */
+.placeholder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--n-50),
+    var(--n-50) 12px,
+    var(--white) 12px,
+    var(--white) 24px
+  );
+  color: var(--n-500);
+  text-align: center;
+}
+.placeholderLabel {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: var(--n-700);
+}
+.placeholderMeta {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--n-400);
+}
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--n-500);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--hairline);
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+/* ---- Caption ---- */
+.caption {
+  margin-top: 0.9rem;
+  font-size: var(--fs-small);
+  color: var(--muted);
+  max-width: 60ch;
+}
+.reconNote {
+  color: var(--n-400);
+}

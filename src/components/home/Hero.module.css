@@ -1,0 +1,92 @@
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: clamp(6rem, 12vh, 9rem) clamp(2.5rem, 6vh, 5rem);
+  position: relative;
+}
+
+.headline {
+  position: relative;
+  font-size: clamp(3.2rem, 11.5vw, 12rem);
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  max-width: 15ch;
+  text-wrap: balance;
+}
+.titleWrap {
+  display: block;
+}
+.greetingOverlay {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.greetingLine {
+  display: block;
+  max-width: 16ch;
+}
+.lineMask {
+  display: block;
+  overflow: hidden;
+}
+.lineInner {
+  display: block;
+}
+.lineInner.dim {
+  color: var(--n-400);
+}
+
+.support {
+  margin-top: clamp(1.75rem, 4vh, 3rem);
+  font-size: var(--fs-m);
+  color: var(--fg);
+  max-width: 42ch;
+  letter-spacing: -0.01em;
+}
+
+.bottom {
+  margin-top: auto;
+  padding-top: clamp(2.5rem, 6vh, 4.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.arrow {
+  display: inline-block;
+  animation: nudge 2.4s var(--ease-inout) infinite;
+}
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .arrow {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    justify-content: center;
+  }
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}

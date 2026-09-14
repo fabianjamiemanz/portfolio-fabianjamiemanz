@@ -1,0 +1,37 @@
+.collage {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  height: clamp(240px, 32vw, 420px);
+}
+.panel {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  background: var(--n-50);
+  transition: flex-grow 0.55s var(--ease-editorial);
+  cursor: pointer;
+}
+.panel:hover {
+  flex-grow: 7;
+}
+.img {
+  object-fit: cover;
+}
+
+/* Touch / small screens: a calm wrapping grid instead of expanding strips. */
+@media (max-width: 760px) {
+  .collage {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .panel {
+    flex: 1 1 28%;
+    height: 130px;
+  }
+  .panel:hover {
+    flex-grow: 1;
+  }
+}

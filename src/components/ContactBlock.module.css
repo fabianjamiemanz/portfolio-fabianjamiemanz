@@ -1,0 +1,53 @@
+.contact {
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+}
+.eyebrow {
+  margin-bottom: clamp(1.25rem, 3vw, 2.25rem);
+}
+.big {
+  font-size: clamp(2.25rem, 6vw, 5.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+  text-wrap: balance;
+  max-width: 18ch;
+}
+.emailLine {
+  margin-top: clamp(1.25rem, 3vw, 2.25rem);
+}
+.email {
+  font-size: clamp(1.4rem, 3.6vw, 2.75rem);
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  text-align: left;
+}
+.email :global([data-copied]) {
+  color: var(--muted);
+  font-size: 0.5em;
+  vertical-align: middle;
+  letter-spacing: 0.06em;
+}
+.grid {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  row-gap: 2rem;
+  border-top: 1px solid var(--hairline);
+  padding-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+.cell {
+  grid-column: span 3;
+}
+.cellLabel {
+  margin-bottom: 0.6rem;
+}
+.cellValue {
+  font-size: var(--fs-m);
+  letter-spacing: -0.01em;
+}
+@media (max-width: 800px) {
+  .cell {
+    grid-column: span 6;
+  }
+}

@@ -1,0 +1,115 @@
+.top {
+  padding-top: clamp(7rem, 16vh, 11rem);
+  padding-bottom: clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.topMeta {
+  max-width: 30ch;
+}
+.entries {
+  display: flex;
+  flex-direction: column;
+}
+.entry {
+  display: block;
+  border-top: 1px solid var(--hairline);
+  padding-block: clamp(3rem, 8vw, 7rem);
+}
+.entry:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  row-gap: 2rem;
+  align-items: center;
+}
+.info {
+  grid-column: 1 / 5;
+}
+.entry[data-flip="true"] .info {
+  grid-column: 9 / 13;
+  order: 2;
+}
+.media {
+  grid-column: 6 / 13;
+}
+.entry[data-flip="true"] .media {
+  grid-column: 1 / 8;
+  order: 1;
+}
+.frameShift {
+  transition: transform 0.8s var(--ease-editorial);
+}
+.entry:hover .frameShift {
+  transform: translateY(-6px);
+}
+.number {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+.title {
+  font-size: clamp(2.75rem, 7vw, 6rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: transform 0.5s var(--ease-editorial);
+}
+.entry:hover .title {
+  transform: translateX(0.4rem);
+}
+.descriptor {
+  margin-top: 0.9rem;
+  font-size: var(--fs-m);
+  letter-spacing: -0.01em;
+}
+.summary {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: var(--fs-small);
+  max-width: 38ch;
+}
+.tags {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.5rem;
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--hairline);
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+}
+.cta {
+  margin-top: 1.75rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .info,
+  .media,
+  .entry[data-flip="true"] .info,
+  .entry[data-flip="true"] .media {
+    grid-column: 1 / -1;
+    order: initial;
+  }
+  .media {
+    order: 1;
+  }
+  .info {
+    order: 2;
+  }
+}

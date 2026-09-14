@@ -1,0 +1,32 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate3d(-50%, -50%, 0);
+  transition: width 0.28s var(--ease-editorial),
+    height 0.28s var(--ease-editorial), opacity 0.28s var(--ease-editorial),
+    background 0.28s var(--ease-editorial);
+  will-change: transform;
+}
+
+.interactive {
+  width: 46px;
+  height: 46px;
+  opacity: 0.85;
+}
+
+.down {
+  width: 30px;
+  height: 30px;
+}
+
+.hidden {
+  opacity: 0;
+}

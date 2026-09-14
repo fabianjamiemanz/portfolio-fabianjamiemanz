@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="1199" height="629" fill="none" stroke="#ebebeb"/>
+  <text x="80" y="110" fill="#6e6e6e" font-family="monospace" font-size="22" letter-spacing="6">FABIAN JAMIE MANZ — PORTFOLIO</text>
+  <text x="76" y="330" fill="#0a0a0a" font-family="Helvetica, Arial, sans-serif" font-size="150" font-weight="600" letter-spacing="-7">Digital Product</text>
+  <text x="76" y="470" fill="#969696" font-family="Helvetica, Arial, sans-serif" font-size="150" font-weight="600" letter-spacing="-7">Designer</text>
+  <text x="80" y="565" fill="#6e6e6e" font-family="monospace" font-size="24" letter-spacing="2">Zurich, Switzerland — Behavioural design · UX/UI · Visual storytelling</text>
+</svg>

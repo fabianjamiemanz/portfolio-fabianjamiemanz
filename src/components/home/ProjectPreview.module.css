@@ -1,0 +1,116 @@
+.preview {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.media {
+  grid-column: 1 / 8;
+  position: relative;
+  transition: transform 0.7s var(--ease-editorial);
+}
+.text {
+  grid-column: 9 / 13;
+}
+
+.preview[data-flip="true"] .media {
+  grid-column: 6 / 13;
+  order: 2;
+}
+.preview[data-flip="true"] .text {
+  grid-column: 1 / 5;
+  order: 1;
+}
+
+.link {
+  display: block;
+}
+.link:hover .media {
+  transform: scale(0.992);
+}
+.link:hover .frameShift {
+  transform: translateY(-6px) scale(1.012);
+}
+.frameShift {
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+/* Device (portrait phone) previews: pull the mockup toward the page centre
+   so it sits beside the text instead of stranded at the column edge. */
+.preview[data-device="true"] .media {
+  display: flex;
+  justify-content: flex-end;
+}
+.preview[data-device="true"][data-flip="true"] .media {
+  justify-content: flex-start;
+}
+.preview[data-device="true"] .frameShift {
+  width: 340px;
+  max-width: 100%;
+}
+
+.number {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.title {
+  font-size: clamp(2.25rem, 4.5vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  margin-top: 0.75rem;
+}
+.descriptor {
+  margin-top: 0.6rem;
+  color: var(--fg);
+  font-size: var(--fs-m);
+  letter-spacing: -0.01em;
+}
+.summary {
+  margin-top: 1.1rem;
+  color: var(--muted);
+  font-size: var(--fs-small);
+  max-width: 40ch;
+}
+.tags {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.5rem;
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--hairline);
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+}
+.cta {
+  margin-top: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .media,
+  .text,
+  .preview[data-flip="true"] .media,
+  .preview[data-flip="true"] .text {
+    grid-column: 1 / -1;
+    order: initial;
+  }
+  .text {
+    order: 2;
+  }
+  .media {
+    order: 1;
+  }
+}

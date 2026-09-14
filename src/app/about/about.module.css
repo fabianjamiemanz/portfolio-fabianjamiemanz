@@ -1,0 +1,265 @@
+/* Top — Work-page style header */
+.top {
+  padding-top: clamp(7rem, 16vh, 11rem);
+}
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: clamp(1.5rem, 4vw, 3rem);
+}
+.topMeta {
+  max-width: 40ch;
+}
+
+/* Intro — text + portrait, divided by a hairline */
+.introRow {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  row-gap: 2.5rem;
+  align-items: start;
+  border-top: 1px solid var(--hairline);
+  padding-top: clamp(2.5rem, 6vw, 4.5rem);
+}
+.introText {
+  grid-column: 1 / 8;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.lead {
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.introText p {
+  font-size: var(--fs-m);
+  line-height: 1.5;
+  color: var(--fg);
+  max-width: 52ch;
+}
+.introPhoto {
+  grid-column: 9 / 13;
+}
+@media (max-width: 900px) {
+  .introText,
+  .introPhoto {
+    grid-column: 1 / -1;
+  }
+  .introPhoto {
+    max-width: 70%;
+  }
+}
+
+.section {
+  padding-block: clamp(4rem, 10vw, 9rem);
+}
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  border-top: 1px solid var(--hairline);
+  padding-top: 1.75rem;
+}
+.sectionTitle {
+  font-size: var(--fs-l);
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  max-width: 22ch;
+}
+
+/* Experience & Education — two columns */
+.eduGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(2rem, 6vw, 6rem);
+  row-gap: 3rem;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.colHead {
+  margin-bottom: 1.4rem;
+  color: var(--fg);
+}
+.colHeadBreak {
+  margin-top: 2.75rem;
+}
+.entry {
+  padding-block: clamp(1rem, 2vw, 1.35rem);
+  border-top: 1px solid var(--hairline);
+}
+.entryPeriod {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.entryOrg {
+  font-size: var(--fs-m);
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+.entryRole {
+  color: var(--fg);
+  margin-top: 0.2rem;
+}
+.entryNote {
+  color: var(--muted);
+  font-size: var(--fs-small);
+  margin-top: 0.4rem;
+}
+@media (max-width: 700px) {
+  .eduGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* What I do */
+.doGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  row-gap: 2rem;
+}
+.doIntro {
+  grid-column: 1 / 6;
+}
+.doIntro p {
+  color: var(--fg);
+  font-size: var(--fs-m);
+  line-height: 1.5;
+  max-width: 44ch;
+}
+.doList {
+  grid-column: 7 / 13;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.doItem {
+  border-top: 1px solid var(--hairline);
+  padding-top: 1.1rem;
+}
+.doItemTitle {
+  font-size: var(--fs-m);
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+.doItemBody {
+  color: var(--muted);
+  font-size: var(--fs-small);
+  margin-top: 0.45rem;
+  max-width: 50ch;
+}
+.confidential {
+  margin-top: 2.5rem;
+  color: var(--faint);
+  font-size: var(--fs-small);
+  max-width: 60ch;
+  grid-column: 7 / 13;
+}
+@media (max-width: 900px) {
+  .doIntro,
+  .doList,
+  .confidential {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Skills */
+.skillWords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  margin-bottom: clamp(3rem, 7vw, 5rem);
+}
+.skillWord {
+  font-size: clamp(2rem, 7vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+}
+.skillWord[data-alt="true"] {
+  color: var(--n-300);
+}
+.skillCats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem var(--gutter);
+}
+.skillCatTitle {
+  margin-bottom: 1rem;
+}
+.skillCat ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.skillCat li {
+  font-size: var(--fs-small);
+}
+@media (max-width: 900px) {
+  .skillCats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .skillCats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Photography */
+.photoIntro {
+  max-width: 44ch;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+.photoIntroText {
+  color: var(--fg);
+  font-size: var(--fs-m);
+  letter-spacing: -0.01em;
+}
+.igLink {
+  margin-top: 1.25rem;
+  display: inline-flex;
+}
+
+/* Fun facts */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--hairline);
+  border: 1px solid var(--hairline);
+}
+.fact {
+  background: var(--bg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.factNum {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.factText {
+  font-size: var(--fs-m);
+  letter-spacing: -0.015em;
+  max-width: 30ch;
+}
+@media (max-width: 700px) {
+  .facts {
+    grid-template-columns: 1fr;
+  }
+}
