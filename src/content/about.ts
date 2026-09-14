@@ -23,7 +23,7 @@ export const timeline: TimelineItem[] = [
     note: "Where behaviour, psychology and product design met.",
   },
   {
-    org: "Accenture AG / Song",
+    org: "Accenture Song",
     role: "Junior Consultant — Design & Digital Products",
     period: "09/2022 — present",
     kind: "work",
@@ -47,7 +47,7 @@ export interface Role {
 
 export const experience: Role[] = [
   {
-    org: "Accenture AG / Song",
+    org: "Accenture Song",
     role: "Junior Consultant — Design & Digital Products",
     period: "09/2022 — present",
   },
