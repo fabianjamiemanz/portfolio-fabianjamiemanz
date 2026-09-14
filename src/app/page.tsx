@@ -25,7 +25,7 @@ export default function HomePage() {
             </p>
             <p className={styles.personalStatement}>
               I also take pictures. Mostly on film, so I only find out weeks
-              later whether they worked.
+              later how they turned out.
             </p>
             <p className={styles.personalSub}>
               More of it lives on the{" "}

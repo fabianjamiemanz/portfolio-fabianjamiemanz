@@ -50,7 +50,7 @@ export function WorkAboutSplit() {
         <span className={`meta ${styles.index}`}>The person behind it</span>
         <span className={styles.word}>ABOUT</span>
         <span className={styles.desc}>
-          From a childhood love of Minis to behavioural design. The short version.
+          Design of all sorts, photography and a soft spot for good typography.
         </span>
         <span className={`meta ${styles.cue}`}>Enter →</span>
       </a>
